@@ -7,24 +7,51 @@
     <title>Geometry Genious || MAN</title>
     <!--bs link-->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!--custom css link-->
+    <link rel="stylesheet" href="./style.css">
     <!--font awesome link-->
     <script src="https://kit.fontawesome.com/18388af2ea.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!--Navbar design-->
+    <header>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mt-5 py-3 px-4 bg-secondary rounded">
+                <div>
+                    <h3 class="d-inline text-white fw-bold">Inter<span class="text-warning">active</span> </h3>
+                    <p class="fs-6 lh-1 text-white fw-semibold"><span class="text-warning">Geometry</span> Genious</p>
+                </div>
+                <div>
+                    <button class="btn btn-warning fw-semibold">Blog</button>
+                </div>
+            </div>
 
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mt-5 p-3 bg-secondary rounded">
-            <div>
-                <h3 class="d-inline text-white fw-bold">Inter<span class="text-warning">active</span> </h3>
-                <p class="fs-6 lh-1 text-white fw-semibold"><span class="text-warning">Geometry</span> Genious</p>
-            </div>
-            <div>
-                <button class="btn btn-warning fw-semibold">Blog</button>
-            </div>
         </div>
+    </header>
 
-    </div>
+    <main>
+        <section>
+            <div class="container mt-5">
+                <div>
+                    <div class="card py-3 text-center" style="width: 18rem;">
+                        <img src="./images/triangle.png" class="card-img-top w-75 mx-auto" alt="not found!">
+                        <div class="card-body">
+                          <h5 class="card-title">Triangle</h5>
+                          <p class="card-text mb-0">Area(A) = <span>0.5</span> <span>&#215;</span> <span>b</span> <span>&#215;</span> <span>h</span></p>
+                          <div class="d-flex align-items-center justify-content-center gap-2">
+                            <input class="form-control w-25 my-3 input-field-card text-center" placeholder="b" type="text"> <span>cm</span>
+                            <input class="form-control w-25 my-3 input-field-card text-center" placeholder="h" type="text"> <span>cm</span>
+                          </div>
+                          <a href="#" class="btn btn-primary w-100 fw-semibold">Calculate</a>
+                        </div>
+                      </div>
+                </div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+
 
 
     <script src="./bootstrap/b-js/bootstrap.min.js"></script>
