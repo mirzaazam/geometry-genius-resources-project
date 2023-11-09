@@ -1,3 +1,30 @@
 .input-field-card{
     font-size: 13px !important;
 }
+.w-30{
+    width: 30%;
+}
+.w-40{
+    width: 40%;
+}
+.w-50{
+    width: 50%;
+}
+.w-60{
+    width: 60%;
+}
+.w-70{
+    width: 70%;
+}
+.w-80{
+    width: 80%;
+}
+.w-90{
+    width: 90%;
+}
+
+@media screen and (mix-width: 576px) {
+    .w-100-ms{
+        width: 100% !important;
+    }
+}
