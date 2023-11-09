@@ -8,6 +8,11 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
     getInputValueById('triangle-input-right');
     setAreaElementById('triangle-h', 'triangle-input-right', 'triangle-input-right');
 
+    //calculate
+    calculateAreaForThreeInput('triangle-b', 'triangle-h', 'triangle-area');
+
+    //set notification
+    setNotification('triangle-notification', 'd-none')
 });
 
 //Rectengle
@@ -20,6 +25,11 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
     getInputValueById('rectangle-input-right');
     setAreaElementById('rectangle-i', 'rectangle-input-right', 'rectangle-input-right');
 
+    //calculate
+    calculateAreaForTwoInput('rectangle-w', 'rectangle-i', 'rectangle-area');
+
+    //set notification
+    setNotification('rectangle-notification', 'd-none');
 });
 
 
@@ -32,6 +42,12 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
     //parallelogram right input
     getInputValueById('parallelogram-input-right');
     setAreaElementById('parallelogram-h', 'parallelogram-input-right', 'parallelogram-input-right');
+    
+    //calculate
+    calculateAreaForThreeInput('parallelogram-b', 'parallelogram-h', 'parallelogram-area');
+
+    //set notification
+    setNotification('parallelogram-notification', 'd-none')
 
 });
 
@@ -46,6 +62,11 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
     getInputValueById('rhombus-input-right');
     setAreaElementById('rhombus-d2', 'rhombus-input-right', 'rhombus-input-right');
 
+    //calculate
+    calculateAreaForThreeInput('rhombus-d1', 'rhombus-d1', 'rhombus-area');
+
+    //set notification
+    setNotification('rhombus-notification', 'd-none')
 });
 
 
@@ -59,6 +80,11 @@ document.getElementById('Pentagon-btn').addEventListener('click', function(){
     getInputValueById('pentagon-input-right');
     setAreaElementById('pentagon-b', 'pentagon-input-right', 'pentagon-input-right');
 
+    //calculate
+    calculateAreaForThreeInput('pentagon-p', 'pentagon-b', 'pentagon-area');
+
+    //set notification
+    setNotification('pentagon-notification', 'd-none')
 });
 
 document.getElementById('ellipse-btn').addEventListener('click', function(){
@@ -70,4 +96,15 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
     getInputValueById('ellipse-input-right');
     setAreaElementById('ellipse-b', 'ellipse-input-right', 'ellipse-input-right');
 
+    //calculate
+    const pi = 3.1416;
+    const setValue = document.getElementById('ellipse-area');
+    const formulaValue1 = document.getElementById('ellipse-a').innerText;
+    const formulaValue2 = document.getElementById('ellipse-b').innerText;
+    
+    const area = pi * formulaValue1 * formulaValue2;
+    setValue.innerText = area;
+
+    //set notificationx
+    setNotification('ellipse-notification', 'd-none')
 });

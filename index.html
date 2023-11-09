@@ -36,6 +36,7 @@
         <div class="row">
           <div class="col-12 col-md-12 col-sm-12 col-lg-8">
             <div class=" d-lg-flex d-md-flex d-sm-flex flex-wrap gap-3 justify-content-center">
+              <!-- this card is Triangle -->
               <div class="card py-3 text-center w-30 w-100-ms">
                 <div class="h-50 d-flex align-items-center">
                   <img src="./images/triangle.png" class="card-img-top w-75 mx-auto" alt="not found!">
@@ -55,6 +56,7 @@
                 </div>
               </div>
 
+              <!-- this card is Rectangle -->
               <div class="card py-3 text-center w-30 w-100-ms">
                 <div class="h-50 d-flex align-items-center">
                   <img src="./images/rectangle.png" class="card-img-top w-75 mx-auto" alt="not found!">
@@ -72,6 +74,7 @@
                 </div>
               </div>
 
+              <!-- this card is parallelogram -->
               <div class="card py-3 text-center w-30 w-100-ms">
                 <div class="h-50 d-flex align-items-center">
                   <img src="./images/parallelogram.png" class="card-img-top w-75 mx-auto" alt="not found!">
@@ -89,6 +92,7 @@
                 </div>
               </div>
 
+              <!-- this card id Rhombus -->
               <div class="card py-3 text-center w-30 w-100-ms">
                 <div class="h-50 d-flex align-items-center">
                   <img src="./images/rhombus.png" class="card-img-top w-80 mx-auto" alt="not found!">
@@ -154,38 +158,38 @@
               <div class="card-body">
                 <h5 class="card-title text-center"><u>Area Calculation</u></h5>
                 <div>
-                  <p class="d-flex align-items-center justify-content-around">1. Triangle
-                     <span><span>0</span>cm<sup>2</sup></span>        
+                  <p id="triangle-notification"  class="d-flex d-none align-items-center justify-content-around">1. Triangle
+                     <span><span id="triangle-area">0</span>cm<sup>2</sup></span>        
                      <button class="btn btn-warning">Convert to m<sup>2</sup></button>
                      <i class="fa-solid fa-xmark fs-3" style="color: #ff0000;"></i>   
                   </p>
 
-                  <p class="d-flex d-none align-items-center justify-content-around">2. Rectangle
-                     <span><span>0</span>cm<sup>2</sup></span>       
+                  <p id="rectangle-notification" class="d-flex d-none align-items-center justify-content-around">2. Rectangle
+                     <span><span id="rectangle-area">0</span>cm<sup>2</sup></span>       
                      <button class="btn btn-warning">Convert to m<sup>2</sup></button>
                      <i class="fa-solid fa-xmark fs-3" style="color: #ff0000;"></i>   
                   </p>
 
-                  <p class="d-flex d-none align-items-center justify-content-around">3. Parallelogram
-                     <span><span>0</span>cm<sup>2</sup></span>       
+                  <p id="parallelogram-notification" class="d-flex d-none align-items-center justify-content-around">3. Parallelogram
+                     <span><span id="parallelogram-area">0</span>cm<sup>2</sup></span>       
                      <button class="btn btn-warning">Convert to m<sup>2</sup></button>
                      <i class="fa-solid fa-xmark fs-3" style="color: #ff0000;"></i>   
                   </p>
 
-                  <p class="d-flex d-none align-items-center justify-content-around">4. Rhombus
-                     <span><span>0</span>cm<sup>2</sup></span>       
+                  <p id="rhombus-notification" class="d-flex d-none align-items-center justify-content-around">4. Rhombus
+                     <span><span id="rhombus-area">0</span>cm<sup>2</sup></span>       
                      <button class="btn btn-warning">Convert to m<sup>2</sup></button>
                      <i class="fa-solid fa-xmark fs-3" style="color: #ff0000;"></i>   
                   </p>
 
-                  <p class="d-flex d-none align-items-center justify-content-around">5. Pentagon
-                     <span><span>0</span>cm<sup>2</sup></span>       
+                  <p id="pentagon-notification" class="d-flex d-none align-items-center justify-content-around">5. Pentagon
+                     <span><span id="pentagon-area">0</span>cm<sup>2</sup></span>       
                      <button class="btn btn-warning">Convert to m<sup>2</sup></button>
                      <i class="fa-solid fa-xmark fs-3" style="color: #ff0000;"></i>   
                   </p>
 
                   <p class="d-flex d-none align-items-center justify-content-around">6. Ellipse
-                     <span><span>0</span>cm<sup>2</sup></span>       
+                     <span><span id="ellipse-area">0</span>cm<sup>2</sup></span>       
                      <button class="btn btn-warning">Convert to m<sup>2</sup></button>
                      <i class="fa-solid fa-xmark fs-3" style="color: #ff0000;"></i>   
                   </p>
