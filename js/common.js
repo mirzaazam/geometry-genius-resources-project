@@ -72,6 +72,7 @@ function setRandomBgColor(cardName) {
 //remove notification from area calculate
 function removeNoti(crossBtn, attribute, notification){
     document.getElementById(crossBtn).addEventListener('click', function(){
+        console.log('get click');
         const setClass = document.getElementById(notification);
         setClass.classList.add(attribute);
     })

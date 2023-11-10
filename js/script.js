@@ -1,21 +1,38 @@
 //Tringale
 document.getElementById('triangle-btn').addEventListener('click', function () {
-   
-   
-   
+
+
     //Tringale left input
-    getInputValueById('triangle-input-left');
+    const triangleInputLeft = getInputValueById('triangle-input-left');
     setAreaElementById('triangle-b', 'triangle-input-left', 'triangle-input-left');
 
     //Tringale right input
-    getInputValueById('triangle-input-right');
+    const triangleInputRight = getInputValueById('triangle-input-right');
     setAreaElementById('triangle-h', 'triangle-input-right', 'triangle-input-right');
 
-    //calculate
-    calculateAreaForThreeInput('triangle-b', 'triangle-h', 'triangle-area');
+    if (isNaN(triangleInputLeft, triangleInputRight, '')) {
+        alert('Invalid input!');
+    }
+    else if ( 0 > triangleInputLeft,triangleInputRight ){
+        alert('Please Enter positive value!');
+    }
 
-    //set notification
-    setNotification('triangle-notification', 'd-none')
+    else if ('' === triangleInputLeft && triangleInputRight == triangleInputRight){
+        alert('please Enter the positive number on left input!')
+    }
+
+    else if (triangleInputLeft === triangleInputLeft && '' == triangleInputRight){
+        alert('please Enter the positive number on right input!')
+    }
+    else {
+
+        //calculate
+        calculateAreaForThreeInput('triangle-b', 'triangle-h', 'triangle-area');
+
+        //set notification
+        setNotification('triangle-notification', 'd-none')
+    }
+
 });
 
 //Rectengle
@@ -121,7 +138,7 @@ hover('card-pentagon', 'card-pentagon');
 hover('card-ellipse', 'card-ellipse');
 
 //try for remove card bg when hover the mouse on calculate btn.
-document.getElementById('triangle-btn').addEventListener('mouseover', function(){
+document.getElementById('triangle-btn').addEventListener('mouseover', function () {
     const card = document.getElementById('card-triangle');
     card.style.backgroundColor = 'red';
 
@@ -129,3 +146,8 @@ document.getElementById('triangle-btn').addEventListener('mouseover', function()
 
 //remove notification from area calculate
 removeNoti('cross-triangle', 'd-none', 'triangle-notification');
+removeNoti('cross-rectangle', 'd-none', 'rectangle-notification');
+removeNoti('cross-parallelogram', 'd-none', 'parallelogram-notification');
+removeNoti('cross-rhombus', 'd-none', 'rhombus-notification');
+removeNoti('cross-pentagon', 'd-none', 'pentagon-notification');
+removeNoti('cross-ellipse', 'd-none', 'ellipse-notification');
