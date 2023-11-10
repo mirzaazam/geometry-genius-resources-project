@@ -23,8 +23,6 @@
     width: 90%;
 }
 
-@media screen and (mix-width: 576px) {
-    .w-100-ms{
-        width: 100% !important;
-    }
+.cross-btn:hover{
+    cursor: pointer;
 }

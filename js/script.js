@@ -1,5 +1,8 @@
 //Tringale
-document.getElementById('triangle-btn').addEventListener('click', function(){
+document.getElementById('triangle-btn').addEventListener('click', function () {
+   
+   
+   
     //Tringale left input
     getInputValueById('triangle-input-left');
     setAreaElementById('triangle-b', 'triangle-input-left', 'triangle-input-left');
@@ -16,7 +19,7 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
 });
 
 //Rectengle
-document.getElementById('rectangle-btn').addEventListener('click', function(){
+document.getElementById('rectangle-btn').addEventListener('click', function () {
     //Rectengle left input
     getInputValueById('rectangle-input-left');
     setAreaElementById('rectangle-w', 'rectangle-input-left', 'rectangle-input-left');
@@ -34,7 +37,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
 
 
 //parallelogram
-document.getElementById('parallelogram-btn').addEventListener('click', function(){
+document.getElementById('parallelogram-btn').addEventListener('click', function () {
     //parallelogram left input
     getInputValueById('parallelogram-input-left');
     setAreaElementById('parallelogram-b', 'parallelogram-input-left', 'parallelogram-input-left');
@@ -42,7 +45,7 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
     //parallelogram right input
     getInputValueById('parallelogram-input-right');
     setAreaElementById('parallelogram-h', 'parallelogram-input-right', 'parallelogram-input-right');
-    
+
     //calculate
     calculateAreaForThreeInput('parallelogram-b', 'parallelogram-h', 'parallelogram-area');
 
@@ -53,7 +56,7 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
 
 
 //Rhombus
-document.getElementById('rhombus-btn').addEventListener('click', function(){
+document.getElementById('rhombus-btn').addEventListener('click', function () {
     //Tringale left input
     getInputValueById('rhombus-input-left');
     setAreaElementById('rhombus-d1', 'rhombus-input-left', 'rhombus-input-left');
@@ -71,7 +74,7 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
 
 
 //Pentagon
-document.getElementById('Pentagon-btn').addEventListener('click', function(){
+document.getElementById('Pentagon-btn').addEventListener('click', function () {
     //Tringale left input
     getInputValueById('pentagon-input-left');
     setAreaElementById('pentagon-p', 'pentagon-input-left', 'pentagon-input-left');
@@ -87,7 +90,7 @@ document.getElementById('Pentagon-btn').addEventListener('click', function(){
     setNotification('pentagon-notification', 'd-none')
 });
 
-document.getElementById('ellipse-btn').addEventListener('click', function(){
+document.getElementById('ellipse-btn').addEventListener('click', function () {
     //Tringale left input
     getInputValueById('ellipse-input-left');
     setAreaElementById('ellipse-a', 'ellipse-input-left', 'ellipse-input-left');
@@ -101,10 +104,28 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
     const setValue = document.getElementById('ellipse-area');
     const formulaValue1 = document.getElementById('ellipse-a').innerText;
     const formulaValue2 = document.getElementById('ellipse-b').innerText;
-    
+
     const area = pi * formulaValue1 * formulaValue2;
     setValue.innerText = area;
 
     //set notificationx
     setNotification('ellipse-notification', 'd-none')
 });
+
+//hover add and remove 
+hover('card-triangle', 'card-triangle');
+hover('card-rectangle', 'card-rectangle');
+hover('card-parallelogram', 'card-parallelogram');
+hover('card-rhombus', 'card-rhombus');
+hover('card-pentagon', 'card-pentagon');
+hover('card-ellipse', 'card-ellipse');
+
+//try for remove card bg when hover the mouse on calculate btn.
+document.getElementById('triangle-btn').addEventListener('mouseover', function(){
+    const card = document.getElementById('card-triangle');
+    card.style.backgroundColor = 'red';
+
+})
+
+//remove notification from area calculate
+removeNoti('cross-triangle', 'd-none', 'triangle-notification');
