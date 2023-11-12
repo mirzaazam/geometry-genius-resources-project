@@ -10,28 +10,32 @@ document.getElementById('triangle-btn').addEventListener('click', function () {
     const triangleInputRight = getInputValueById('triangle-input-right');
     setAreaElementById('triangle-h', 'triangle-input-right', 'triangle-input-right');
 
-    if (isNaN(triangleInputLeft, triangleInputRight, '')) {
-        alert('Invalid input!');
-    }
-    else if ( 0 > triangleInputLeft,triangleInputRight ){
-        alert('Please Enter positive value!');
-    }
+    // if (isNaN(triangleInputLeft, triangleInputRight)) {
+    //     alert('Invalid input!');
+    //     return;
+    // }
+    // else if ( 0 > triangleInputLeft,triangleInputRight ){
+    //     alert('Please Enter positive value!');
+    // }
 
-    else if ('' === triangleInputLeft && triangleInputRight == triangleInputRight){
-        alert('please Enter the positive number on left input!')
-    }
+    // else if (' ' === triangleInputLeft && triangleInputRight == triangleInputRight){
+    //     alert('please Enter the positive number on left input!')
+    // }
 
-    else if (triangleInputLeft === triangleInputLeft && '' == triangleInputRight){
-        alert('please Enter the positive number on right input!')
-    }
-    else {
+    // else if (triangleInputLeft === triangleInputLeft && ' ' == triangleInputRight){
+    //     alert('please Enter the positive number on right input!')
+    // }
+
+    // else {
 
         //calculate
         calculateAreaForThreeInput('triangle-b', 'triangle-h', 'triangle-area');
 
         //set notification
         setNotification('triangle-notification', 'd-none')
-    }
+
+        console.log('worked');
+    // }
 
 });
 
