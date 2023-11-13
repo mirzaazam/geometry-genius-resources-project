@@ -1,77 +1,108 @@
 //Tringale
 document.getElementById('triangle-btn').addEventListener('click', function () {
-
-
-    //Tringale left input
     const triangleInputLeft = getInputValueById('triangle-input-left');
-    setAreaElementById('triangle-b', 'triangle-input-left', 'triangle-input-left');
-
-    //Tringale right input
     const triangleInputRight = getInputValueById('triangle-input-right');
-    setAreaElementById('triangle-h', 'triangle-input-right', 'triangle-input-right');
 
-    // if (isNaN(triangleInputLeft, triangleInputRight)) {
-    //     alert('Invalid input!');
-    //     return;
-    // }
-    // else if ( 0 > triangleInputLeft,triangleInputRight ){
-    //     alert('Please Enter positive value!');
-    // }
+    if (isNaN(triangleInputLeft) || isNaN(triangleInputRight)) {
+        window.alert('Invalid input! Please enter valid numbers.');
+        return true;
+    }
 
-    // else if (' ' === triangleInputLeft && triangleInputRight == triangleInputRight){
-    //     alert('please Enter the positive number on left input!')
-    // }
+    else if (triangleInputLeft <= 0 || triangleInputRight <= 0) {
+        alert('Please enter positive values!');
+        return false;
+    }
 
-    // else if (triangleInputLeft === triangleInputLeft && ' ' == triangleInputRight){
-    //     alert('please Enter the positive number on right input!')
-    // }
+    else if (triangleInputLeft.trim() === '' || triangleInputRight.trim() === '') {
+        alert('Please enter values in both fields!');
+        return false;
+    }
 
-    // else {
+    else {
+        //set value from input field
+        setAreaElementById('triangle-b', triangleInputLeft);
+        setAreaElementById('triangle-h', triangleInputRight);
 
         //calculate
-        calculateAreaForThreeInput('triangle-b', 'triangle-h', 'triangle-area');
+        calculateAreaForThreeInput('triangle-area', 'triangle-b', 'triangle-h');
 
         //set notification
-        setNotification('triangle-notification', 'd-none')
-
-        console.log('worked');
-    // }
-
+        setNotification('triangle-notification', 'd-none');
+    }
 });
+
 
 //Rectengle
 document.getElementById('rectangle-btn').addEventListener('click', function () {
     //Rectengle left input
-    getInputValueById('rectangle-input-left');
-    setAreaElementById('rectangle-w', 'rectangle-input-left', 'rectangle-input-left');
+    const rectangleInputLeft = getInputValueById('rectangle-input-left');
 
     //Rectengle right input
-    getInputValueById('rectangle-input-right');
-    setAreaElementById('rectangle-i', 'rectangle-input-right', 'rectangle-input-right');
+    const rectangleInputRight = getInputValueById('rectangle-input-right');
 
-    //calculate
-    calculateAreaForTwoInput('rectangle-w', 'rectangle-i', 'rectangle-area');
+    if (isNaN(rectangleInputLeft) || isNaN(rectangleInputRight)) {
+        window.alert('Invalid input! Please enter valid numbers.');
+        return true;
+    }
 
-    //set notification
-    setNotification('rectangle-notification', 'd-none');
+    else if (rectangleInputLeft <= 0 || rectangleInputRight <= 0) {
+        alert('Please enter positive values!');
+        return false;
+    }
+
+    else if (rectangleInputLeft.trim() === '' || rectangleInputRight.trim() === '') {
+        alert('Please enter values in both fields!');
+        return false;
+    }
+
+    else {
+
+        //set value from input field
+        setAreaElementById('rectangle-w', 'rectangle-input-left', 'rectangle-input-left');
+        setAreaElementById('rectangle-i', 'rectangle-input-right', 'rectangle-input-right');
+
+        //calculate
+        calculateAreaForTwoInput('rectangle-area', 'rectangle-w', 'rectangle-i');
+
+        //set notification
+        setNotification('rectangle-notification', 'd-none');
+    }
 });
 
 
 //parallelogram
 document.getElementById('parallelogram-btn').addEventListener('click', function () {
     //parallelogram left input
-    getInputValueById('parallelogram-input-left');
-    setAreaElementById('parallelogram-b', 'parallelogram-input-left', 'parallelogram-input-left');
+    const parallelogramInputLeft = getInputValueById('parallelogram-input-left');
 
     //parallelogram right input
-    getInputValueById('parallelogram-input-right');
-    setAreaElementById('parallelogram-h', 'parallelogram-input-right', 'parallelogram-input-right');
+    const parallelogramInputRight = getInputValueById('parallelogram-input-right');
 
-    //calculate
-    calculateAreaForThreeInput('parallelogram-b', 'parallelogram-h', 'parallelogram-area');
+    if (isNaN(parallelogramInputLeft) || isNaN(parallelogramInputRight)) {
+        window.alert('Invalid input! Please enter valid numbers.');
+        return true;
+    }
 
-    //set notification
-    setNotification('parallelogram-notification', 'd-none')
+    else if (parallelogramInputLeft <= 0 || parallelogramInputRight <= 0) {
+        alert('Please enter positive values!');
+        return false;
+    }
+
+    else if (parallelogramInputLeft.trim() === '' || parallelogramInputRight.trim() === '') {
+        alert('Please enter values in both fields!');
+        return false;
+    }
+
+    else {
+        // set value from input field
+        setAreaElementById('parallelogram-b', 'parallelogram-input-left', 'parallelogram-input-left');
+        setAreaElementById('parallelogram-h', 'parallelogram-input-right', 'parallelogram-input-right');
+        //calculate
+        calculateAreaForTwoInput('parallelogram-area', 'parallelogram-b', 'parallelogram-h');
+
+        //set notification
+        setNotification('parallelogram-notification', 'd-none')
+    }
 
 });
 
@@ -79,58 +110,115 @@ document.getElementById('parallelogram-btn').addEventListener('click', function 
 //Rhombus
 document.getElementById('rhombus-btn').addEventListener('click', function () {
     //Tringale left input
-    getInputValueById('rhombus-input-left');
-    setAreaElementById('rhombus-d1', 'rhombus-input-left', 'rhombus-input-left');
+    const rhombusInputLeft = getInputValueById('rhombus-input-left');
 
     //Tringale right input
-    getInputValueById('rhombus-input-right');
-    setAreaElementById('rhombus-d2', 'rhombus-input-right', 'rhombus-input-right');
+    const rhombusInputRight = getInputValueById('rhombus-input-right');
 
-    //calculate
-    calculateAreaForThreeInput('rhombus-area', 'rhombus-d1', 'rhombus-d2');
+    if (isNaN(rhombusInputLeft) || isNaN(rhombusInputRight)) {
+        window.alert('Invalid input! Please enter valid numbers.');
+        return true;
+    }
 
-    //set notification
-    setNotification('rhombus-notification', 'd-none');
-    console.log('worked');
+    else if (rhombusInputLeft <= 0 || rhombusInputRight <= 0) {
+        alert('Please enter positive values!');
+        return false;
+    }
+
+    else if (rhombusInputLeft.trim() === '' || rhombusInputRight.trim() === '') {
+        alert('Please enter values in both fields!');
+        return false;
+    }
+
+    else {
+        //set value from input field
+        setAreaElementById('rhombus-d1', 'rhombus-input-left', 'rhombus-input-left');
+        setAreaElementById('rhombus-d2', 'rhombus-input-right', 'rhombus-input-right');
+        //calculate
+        calculateAreaForThreeInput('rhombus-area', 'rhombus-d1', 'rhombus-d2');
+
+        //set notification
+        setNotification('rhombus-notification', 'd-none');
+    }
+
 });
 
 
 //Pentagon
 document.getElementById('Pentagon-btn').addEventListener('click', function () {
     //Tringale left input
-    getInputValueById('pentagon-input-left');
-    setAreaElementById('pentagon-p', 'pentagon-input-left', 'pentagon-input-left');
+    const pentagonInputLeft = getInputValueById('pentagon-input-left');
 
     //Tringale right input
-    getInputValueById('pentagon-input-right');
-    setAreaElementById('pentagon-b', 'pentagon-input-right', 'pentagon-input-right');
+    const pentagonInputRight = getInputValueById('pentagon-input-right');
 
-    //calculate
-    calculateAreaForThreeInput('pentagon-p', 'pentagon-b', 'pentagon-area');
+    if (isNaN(pentagonInputLeft) || isNaN(pentagonInputRight)) {
+        window.alert('Invalid input! Please enter valid numbers.');
+        return true;
+    }
 
-    //set notification
-    setNotification('pentagon-notification', 'd-none')
+    else if (pentagonInputLeft <= 0 || pentagonInputRight <= 0) {
+        alert('Please enter positive values!');
+        return false;
+    }
+
+    else if (pentagonInputLeft.trim() === '' || pentagonInputRight.trim() === '') {
+        alert('Please enter values in both fields!');
+        return false;
+    }
+
+    else {
+
+        setAreaElementById('pentagon-p', 'pentagon-input-left', 'pentagon-input-left');
+        setAreaElementById('pentagon-b', 'pentagon-input-right', 'pentagon-input-right');
+        //calculate
+        calculateAreaForThreeInput('pentagon-area', 'pentagon-p', 'pentagon-b');
+
+        //set notification
+        setNotification('pentagon-notification', 'd-none')
+    }
 });
 
+
+//ellipse
 document.getElementById('ellipse-btn').addEventListener('click', function () {
     //Tringale left input
-    getInputValueById('ellipse-input-left');
-    setAreaElementById('ellipse-a', 'ellipse-input-left', 'ellipse-input-left');
+    const ellipseInputLeft = getInputValueById('ellipse-input-left');
 
     //Tringale right input
-    getInputValueById('ellipse-input-right');
-    setAreaElementById('ellipse-b', 'ellipse-input-right', 'ellipse-input-right');
+    const ellipseInputRight = getInputValueById('ellipse-input-right');
 
-    //calculate
-    const pi = 3.1416;
-    const setValue = document.getElementById('ellipse-area');
-    const formulaValue1 = document.getElementById('ellipse-a').innerText;
-    const formulaValue2 = document.getElementById('ellipse-b').innerText;
-    const area = pi * formulaValue1 * formulaValue2;
-    const p = setValue.innerText = area;
+    if (isNaN(ellipseInputLeft) || isNaN(ellipseInputRight)) {
+        window.alert('Invalid input! Please enter valid numbers.');
+        return true;
+    }
 
-    //set notification
-    setNotification('ellipse-notification', 'd-none')
+    else if (ellipseInputLeft <= 0 || ellipseInputRight <= 0) {
+        alert('Please enter positive values!');
+        return false;
+    }
+
+    else if (ellipseInputLeft.trim() === '' || ellipseInputRight.trim() === '') {
+        alert('Please enter values in both fields!');
+        return false;
+    }
+
+    else {
+        //set value from input field
+        setAreaElementById('ellipse-b', 'ellipse-input-right', 'ellipse-input-right');
+        setAreaElementById('ellipse-a', 'ellipse-input-left', 'ellipse-input-left');
+
+        //calculate
+        const pi = 3.1416;
+        const setValue = document.getElementById('ellipse-area');
+        const formulaValue1 = document.getElementById('ellipse-a').innerText;
+        const formulaValue2 = document.getElementById('ellipse-b').innerText;
+        const area = pi * formulaValue1 * formulaValue2;
+        const p = setValue.innerText = area;
+
+        //set notification
+        setNotification('ellipse-notification', 'd-none')
+    }
 });
 
 //hover add and remove 

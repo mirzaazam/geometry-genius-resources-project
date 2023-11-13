@@ -12,7 +12,7 @@ function setAreaElementById(element, value, inputIdName){
 function getInputValueById(value){
     const inputField = document.getElementById(value);
     const inputFieldString = inputField.value;
-    const inputFieldValue = parseFloat(inputFieldString).toFixed(2);
+    const inputFieldValue = parseFloat(inputFieldString);
     return inputFieldValue;
 }
 
@@ -24,7 +24,7 @@ function setNotification(notification, className){
 
 //calculate three input value
 function calculateAreaForThreeInput(set, value1, value2){
-    const setValue = document.getElementById(set).innerText;
+    const setValue = document.getElementById(set);
     const commonValue = 0.5;
     const formulaValue1 = document.getElementById(value1).innerText;
     const formulaValue2 = document.getElementById(value2).innerText;
@@ -35,7 +35,7 @@ function calculateAreaForThreeInput(set, value1, value2){
 }
 
 //calculate two input value
-function calculateAreaForTwoInput(value1, value2, set){
+function calculateAreaForTwoInput( set, value1, value2){
     const setValue = document.getElementById(set);
     const formulaValue1 = document.getElementById(value1).innerText;
     const formulaValue2 = document.getElementById(value2).innerText;
@@ -77,3 +77,12 @@ function removeNotificationFromCalArea(removeBtn, getNotification, addClass){
         triangleNoti.classList.add(addClass);
     })
 }
+
+// function forEmptyInput(inputF1, inputF2){
+//     const inputField1 = document.getElementById(inputF1);
+//     const inputField2 = document.getElementById(inputF2);
+//     const inputValue1 = inputField1.value;
+//     const inputValue2 = inputField2.value;
+//     inputValue1.value = '';
+//     inputValue2.value = '';
+// }
