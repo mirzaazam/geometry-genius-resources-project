@@ -87,10 +87,11 @@ document.getElementById('rhombus-btn').addEventListener('click', function () {
     setAreaElementById('rhombus-d2', 'rhombus-input-right', 'rhombus-input-right');
 
     //calculate
-    calculateAreaForThreeInput('rhombus-d1', 'rhombus-d1', 'rhombus-area');
+    calculateAreaForThreeInput('rhombus-area', 'rhombus-d1', 'rhombus-d2');
 
     //set notification
-    setNotification('rhombus-notification', 'd-none')
+    setNotification('rhombus-notification', 'd-none');
+    console.log('worked');
 });
 
 
@@ -125,11 +126,10 @@ document.getElementById('ellipse-btn').addEventListener('click', function () {
     const setValue = document.getElementById('ellipse-area');
     const formulaValue1 = document.getElementById('ellipse-a').innerText;
     const formulaValue2 = document.getElementById('ellipse-b').innerText;
-
     const area = pi * formulaValue1 * formulaValue2;
-    setValue.innerText = area;
+    const p = setValue.innerText = area;
 
-    //set notificationx
+    //set notification
     setNotification('ellipse-notification', 'd-none')
 });
 
@@ -148,10 +148,10 @@ document.getElementById('triangle-btn').addEventListener('mouseover', function (
 
 })
 
-//remove notification from area calculate
-removeNoti('cross-triangle', 'd-none', 'triangle-notification');
-removeNoti('cross-rectangle', 'd-none', 'rectangle-notification');
-removeNoti('cross-parallelogram', 'd-none', 'parallelogram-notification');
-removeNoti('cross-rhombus', 'd-none', 'rhombus-notification');
-removeNoti('cross-pentagon', 'd-none', 'pentagon-notification');
-removeNoti('cross-ellipse', 'd-none', 'ellipse-notification');
+// //remove notification from area calculate
+removeNotificationFromCalArea('cross-triangle', 'triangle-notification', 'd-none')
+removeNotificationFromCalArea('cross-rectangle', 'rectangle-notification', 'd-none')
+removeNotificationFromCalArea('cross-parallelogram', 'parallelogram-notification', 'd-none')
+removeNotificationFromCalArea('cross-rhombus', 'rhombus-notification', 'd-none')
+removeNotificationFromCalArea('cross-pentagon', 'pentagon-notification', 'd-none')
+removeNotificationFromCalArea('cross-ellipse', 'ellipse-notification', 'd-none')

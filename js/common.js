@@ -12,7 +12,7 @@ function setAreaElementById(element, value, inputIdName){
 function getInputValueById(value){
     const inputField = document.getElementById(value);
     const inputFieldString = inputField.value;
-    const inputFieldValue = parseFloat(inputFieldString);
+    const inputFieldValue = parseFloat(inputFieldString).toFixed(2);
     return inputFieldValue;
 }
 
@@ -23,14 +23,15 @@ function setNotification(notification, className){
 }
 
 //calculate three input value
-function calculateAreaForThreeInput(value1, value2, set){
-    const setValue = document.getElementById(set);
+function calculateAreaForThreeInput(set, value1, value2){
+    const setValue = document.getElementById(set).innerText;
     const commonValue = 0.5;
     const formulaValue1 = document.getElementById(value1).innerText;
     const formulaValue2 = document.getElementById(value2).innerText;
     
-    const area = commonValue * formulaValue1 * formulaValue2;
-    setValue.innerText = area;
+    const areaClaculation = commonValue * formulaValue1 * formulaValue2;
+    const areaClaculationValue = parseFloat(areaClaculation).toFixed(2);
+    setValue.innerText = areaClaculationValue;
 }
 
 //calculate two input value
@@ -69,12 +70,10 @@ function setRandomBgColor(cardName) {
     })
 }
 
-//remove notification from area calculate
-function removeNoti(crossBtn, attribute, notification){
-    document.getElementById(crossBtn).addEventListener('click', function(){
-        // console.log('get click');
-        const setClass = document.getElementById(notification);
-        setClass.classList.add(attribute);
+// //remove notification from area calculate
+function removeNotificationFromCalArea(removeBtn, getNotification, addClass){
+    document.getElementById(removeBtn).addEventListener('click', function(){
+        const triangleNoti = document.getElementById(getNotification);
+        triangleNoti.classList.add(addClass);
     })
 }
-
