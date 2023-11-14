@@ -11,7 +11,7 @@ function setAreaElementById(element, value, inputIdName){
 //get input value from all input field
 function getInputValueById(value){
     const inputField = document.getElementById(value);
-    const inputFieldString = inputField.value;
+    const inputFieldString = inputField.value;  
     const inputFieldValue = parseFloat(inputFieldString);
     return inputFieldValue;
 }

@@ -1,27 +1,28 @@
 //Tringale
 document.getElementById('triangle-btn').addEventListener('click', function () {
-    const triangleInputLeft = getInputValueById('triangle-input-left');
-    const triangleInputRight = getInputValueById('triangle-input-right');
+    const triangleInputRight = getInputValueById('triangle-input-left');
+    const triangleInputLeft = getInputValueById('triangle-input-right');
+
 
     if (isNaN(triangleInputLeft) || isNaN(triangleInputRight)) {
         window.alert('Invalid input! Please enter valid numbers.');
-        return true;
+
     }
 
     else if (triangleInputLeft <= 0 || triangleInputRight <= 0) {
         alert('Please enter positive values!');
-        return false;
+
     }
 
-    else if (triangleInputLeft.trim() === '' || triangleInputRight.trim() === '') {
+   else if (triangleInputLeft === '' || triangleInputRight === '') {
         alert('Please enter values in both fields!');
-        return false;
+
     }
 
     else {
         //set value from input field
-        setAreaElementById('triangle-b', triangleInputLeft);
-        setAreaElementById('triangle-h', triangleInputRight);
+        setAreaElementById('triangle-b', 'triangle-input-left', 'triangle-input-left');
+        setAreaElementById('triangle-h', 'triangle-input-right', 'triangle-input-right');
 
         //calculate
         calculateAreaForThreeInput('triangle-area', 'triangle-b', 'triangle-h');
@@ -29,6 +30,7 @@ document.getElementById('triangle-btn').addEventListener('click', function () {
         //set notification
         setNotification('triangle-notification', 'd-none');
     }
+
 });
 
 
@@ -50,7 +52,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function () {
         return false;
     }
 
-    else if (rectangleInputLeft.trim() === '' || rectangleInputRight.trim() === '') {
+    else if (rectangleInputLeft === '' || rectangleInputRight === '') {
         alert('Please enter values in both fields!');
         return false;
     }
@@ -88,7 +90,7 @@ document.getElementById('parallelogram-btn').addEventListener('click', function 
         return false;
     }
 
-    else if (parallelogramInputLeft.trim() === '' || parallelogramInputRight.trim() === '') {
+    else if (parallelogramInputLeft === '' || parallelogramInputRight === '') {
         alert('Please enter values in both fields!');
         return false;
     }
@@ -125,7 +127,7 @@ document.getElementById('rhombus-btn').addEventListener('click', function () {
         return false;
     }
 
-    else if (rhombusInputLeft.trim() === '' || rhombusInputRight.trim() === '') {
+    else if (rhombusInputLeft === '' || rhombusInputRight === '') {
         alert('Please enter values in both fields!');
         return false;
     }
@@ -162,7 +164,7 @@ document.getElementById('Pentagon-btn').addEventListener('click', function () {
         return false;
     }
 
-    else if (pentagonInputLeft.trim() === '' || pentagonInputRight.trim() === '') {
+    else if (pentagonInputLeft === '' || pentagonInputRight === '') {
         alert('Please enter values in both fields!');
         return false;
     }
@@ -198,7 +200,7 @@ document.getElementById('ellipse-btn').addEventListener('click', function () {
         return false;
     }
 
-    else if (ellipseInputLeft.trim() === '' || ellipseInputRight.trim() === '') {
+    else if (ellipseInputLeft === '' || ellipseInputRight === '') {
         alert('Please enter values in both fields!');
         return false;
     }
